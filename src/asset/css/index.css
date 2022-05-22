@@ -11,7 +11,7 @@
 @layer base {
     * {
         @apply box-border;
-        font-family: 'Fira Code', 'monospace', 'sans serif';
+        font-family: 'Fira Code', monospace, 'sans serif';
         scroll-behavior: smooth;
     }
 }
