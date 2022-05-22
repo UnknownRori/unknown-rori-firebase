@@ -11,9 +11,6 @@
         @apply md:w-8/12 m-auto;
     }
 
-    .footer {
-        @apply w-screen fixed bottom-0 bg-gray-200 bg-opacity-20;
-    }
     .background {
         @apply from-black to-gray-800 bg-gradient-to-bl w-screen h-screen -z-10 overflow-hidden top-0 pointer-events-none object-cover transition-opacity duration-[1s];
     }
@@ -21,16 +18,9 @@
     .background img {
         @apply absolute brightness-[45%];
     }
-    .navbar {
-        @apply bg-gray-200 bg-opacity-20 fixed w-screen p-4;
-    }
 
     .nav-link {
         @apply m-3;
-    }
-
-    .sidebar {
-        @apply top-44 fixed bg-gray-900 bg-opacity-60 rounded-md p-6 transition-all duration-1000 -translate-x-[80px];
     }
 
     .button-secondary {

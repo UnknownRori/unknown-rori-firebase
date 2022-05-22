@@ -3,9 +3,9 @@ import React from "react";
 export class Navbar extends React.Component {
     render(): React.ReactNode {
         return (
-            <nav className="navbar">
+            <nav className="bg-gray-200 bg-opacity-20 fixed w-screen p-4">
                 <div className="wrapper">
-                    <ul className="nav-menu flex flex-row-reverse">
+                    <ul className="flex flex-row-reverse">
                         <li className="nav-item">
                             <a href="#profile" className="nav-link">Profile</a>
                         </li>
