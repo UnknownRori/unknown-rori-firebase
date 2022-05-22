@@ -7,13 +7,13 @@ export class Navbar extends React.Component {
                 <div className="wrapper">
                     <ul className="flex flex-row-reverse">
                         <li className="nav-item">
-                            <a href="#profile" className="nav-link">Profile</a>
+                            <button className="nav-link">Profile</button>
                         </li>
                         <li className="nav-item">
-                            <a href="#projects" className="nav-link">Projects</a>
+                            <button className="nav-link">Projects</button>
                         </li>
                         <li className="nav-item">
-                            <a href="#about-me" className="nav-link">About me</a>
+                            <button className="nav-link">About me</button>
                         </li>
                     </ul>
                 </div>

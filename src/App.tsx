@@ -9,21 +9,19 @@ import { MyProjectsPage } from "./page/MyProjects";
 
 class App extends React.Component {
     public state = {
-        page: [MyProfilePage, MyProjectsPage, ContactMePage, AboutMePage],
-        currentPage: 0,
+        page: [<MyProfilePage />, <MyProjectsPage />, <ContactMePage />, <AboutMePage />],
+        currentPageNumber: 0,
         isAnimate: false,
     };
 
     render(): React.ReactNode {
-        const display = this.state.page[this.state.currentPage];
-
         return (
             <>
                 <div className='min-h-screen flex'>
                     <Navbar />
                     <Sidebar />
                     <>
-                        {display}
+                        {this.state.page[this.state.currentPageNumber]}
                     </>
                     <Footer />
                 </div>
