@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Dancing+Script);
+
 @layer components {
     .wrapper {
         @apply md:w-8/12 m-auto;
@@ -32,14 +36,13 @@
     .button-secondary {
         @apply bg-gray-800 rounded-lg duration-500 transition-colors focus:bg-gray-500;
     }
+
+    .profile-name {
+        font-family: 'Dancing Script', monospace, 'sans serif';
+    }
 }
 
 @layer base {
-    @font-face {
-        font-family: 'Fira Code';
-        src: url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
-    }
-    
     * {
         @apply box-border text-white;
         font-family: 'Fira Code', monospace, 'sans serif';
