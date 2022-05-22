@@ -26,9 +26,22 @@
     .nav-link {
         @apply m-3;
     }
+
+    .sidebar {
+        @apply top-44 fixed bg-gray-900 bg-opacity-60 rounded-md p-6 transition-all duration-1000 -translate-x-[80px];
+    }
+
+    .button-secondary {
+        @apply bg-gray-800 rounded-lg duration-500 transition-colors focus:bg-gray-500;
+    }
 }
 
 @layer base {
+    @font-face {
+        font-family: 'Fira Code';
+        src: url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
+    }
+    
     * {
         @apply box-border text-white;
         font-family: 'Fira Code', monospace, 'sans serif';
