@@ -10,8 +10,8 @@ export class SocialList extends React.Component {
             <>
                 <h2 className="text-center">Link</h2>
                 <Icon href='https://github.com/UnknownRori' img={github} alt='Github' />
-                <Icon href='https://github.com/UnknownRori' img={stackoverflow} alt='Github' />
-                <Icon href='https://github.com/UnknownRori' img={twitter} alt='Github' />
+                <Icon href='https://stackoverflow.com/users/13991588/unknownrori' img={stackoverflow} alt='Github' />
+                <Icon href='https://twitter.com/UnknownRori' img={twitter} alt='Github' />
             </>
         );
     }
