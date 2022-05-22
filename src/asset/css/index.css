@@ -6,6 +6,26 @@
     .wrapper {
         @apply md:w-8/12 m-auto;
     }
+    .footer {
+        @apply w-screen fixed bottom-0 bg-cyan-200 bg-opacity-20;
+    }
+    .footer {
+        @apply w-screen fixed bottom-0 bg-cyan-200 bg-opacity-20;
+    }
+    .background {
+        @apply from-black to-gray-800 bg-gradient-to-bl w-screen h-screen -z-10 overflow-hidden top-0 pointer-events-none object-cover transition-opacity duration-[1s];
+    }
+
+    .background img {
+        @apply absolute brightness-[45%];
+    }
+    .navbar {
+        @apply bg-cyan-200 bg-opacity-20 fixed w-screen p-4;
+    }
+
+    .nav-link {
+        @apply m-3;
+    }
 }
 
 @layer base {

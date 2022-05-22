@@ -5,7 +5,6 @@ import background3 from './../../asset/image/background/background3.webp';
 import background4 from './../../asset/image/background/background4.webp';
 import background5 from './../../asset/image/background/background5.webp';
 import background6 from './../../asset/image/background/background6.webp';
-import './../../asset/css/Background.css';
 
 export class Background extends React.Component {
     public state = {
