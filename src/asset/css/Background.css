@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .background {
+        @apply from-black to-gray-800 bg-gradient-to-bl w-screen h-screen -z-10 overflow-hidden top-0 pointer-events-none object-cover transition-opacity duration-[1s];
+    }
+
+    .background img {
+        @apply absolute brightness-[45%];
+    }
+}

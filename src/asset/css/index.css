@@ -10,7 +10,7 @@
 
 @layer base {
     * {
-        @apply box-border;
+        @apply box-border text-white;
         font-family: 'Fira Code', monospace, 'sans serif';
         scroll-behavior: smooth;
     }
