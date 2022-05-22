@@ -5,9 +5,11 @@ import { Profile } from './components/profile/Profile';
 
 function App() {
     return (
-        <div className='min-h-screen'>
+        <div className='min-h-screen flex'>
             <Navbar />
-            <Profile />
+            <div className='wrapper'>
+                <Profile />
+            </div>
             <Footer />
         </div>
     );
