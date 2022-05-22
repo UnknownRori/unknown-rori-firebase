@@ -2,9 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Dancing+Script);
+
 @layer components {
     .wrapper {
         @apply md:w-8/12 m-auto;
+    }
+
+    .background {
+        @apply from-black to-gray-800 bg-gradient-to-bl w-screen h-screen -z-10 overflow-hidden top-0 pointer-events-none object-cover transition-opacity duration-[1s];
+    }
+
+    .background img {
+        @apply absolute brightness-[45%];
+    }
+
+    .nav-link {
+        @apply m-3;
+    }
+
+    .button-secondary {
+        @apply bg-gray-800 rounded-lg duration-500 transition-colors focus:bg-gray-500;
+    }
+
+    .profile-name {
+        font-family: 'Dancing Script', monospace, 'sans serif';
     }
 }
 

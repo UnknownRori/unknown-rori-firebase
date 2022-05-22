@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer components {
-    .footer {
-        @apply w-screen fixed bottom-0 bg-cyan-200 bg-opacity-20;
-    }
-}
