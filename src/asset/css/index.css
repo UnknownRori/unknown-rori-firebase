@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .wrapper {
+        @apply md:w-8/12 m-auto;
+    }
+}
+
+@layer base {
+    * {
+        @apply box-border;
+        font-family: 'Fira Code', 'monospace', 'sans serif';
+        scroll-behavior: smooth;
+    }
+}
