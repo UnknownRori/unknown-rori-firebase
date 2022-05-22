@@ -39,7 +39,7 @@ export class Background extends React.Component {
 
     render(): React.ReactNode {
         return (
-            <div className='absolute background'>
+            <div className='fixed background'>
                 <img src={background1} id='background-1' style={{'opacity': 1}} className='background' alt="" />
                 <img src={background2} id='background-2' style={{'opacity': 0}} className='background' alt="" />
                 <img src={background3} id='background-3' style={{'opacity': 0}} className='background' alt="" />
