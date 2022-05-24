@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, PropsWithoutRef, ReactPropTypes } from "react";
+import React from "react";
 import { NavbarProps } from "../../interface/NavbarProps";
 
 export class Navbar extends React.Component <NavbarProps> {
