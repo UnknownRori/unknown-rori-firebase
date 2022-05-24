@@ -12,14 +12,44 @@ module.exports = {
                 '2xl': '1280px',
             },
             keyframes: {
-                fadeIn: {
+                fadeInLeft: {
                     '0%': {
                         opacity: '0%',
-                        transform: 'translateX(-48px)'
+                        transform: 'translateX(-100vw)'
                     },
                     '100': {
                         opacity: '100%',
                         transform: 'translateX(0px)'
+                    }
+                },
+                fadeInRight: {
+                    '0%': {
+                        opacity: '0%',
+                        transform: 'translateX(100vw)'
+                    },
+                    '100': {
+                        opacity: '100%',
+                        transform: 'translateX(0px)'
+                    }
+                },
+                fadeOutLeft: {
+                    '0%': {
+                        opacity: '0%',
+                        transform: 'translateX(0vw)'
+                    },
+                    '100': {
+                        opacity: '100%',
+                        transform: 'translateX(-100px)'
+                    }
+                },
+                fadeOutRight: {
+                    '0%': {
+                        opacity: '0%',
+                        transform: 'translateX(0vw)'
+                    },
+                    '100': {
+                        opacity: '100%',
+                        transform: 'translateX(100px)'
                     }
                 }
             },
