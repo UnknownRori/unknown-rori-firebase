@@ -1,3 +1,3 @@
-export interface NavbarProps<T> {
-    changePage: T
+export interface NavbarProps {
+    changePage: CallableFunction
 }
