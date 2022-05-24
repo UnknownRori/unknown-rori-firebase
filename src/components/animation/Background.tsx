@@ -10,8 +10,8 @@ import { BackgroundItem } from './BackgroundItem';
 export class Background extends React.Component {
     public state = {
         backgrounds: [background1, background2, background3, background4, background5, background6],
-        interval: 1,
-        beforeInterval: 0,
+        interval: 0,
+        beforeInterval: 6,
         backgroundInterval: undefined
     };
 
@@ -40,13 +40,15 @@ export class Background extends React.Component {
                 this.changeInterval(this.state.interval + 1);
                 this.changeBeforeInterval(this.state.beforeInterval + 1);
 
-                if (this.state.interval > 6) {
-                    this.changeInterval(1);
+                const backgroundLength = this.state.backgrounds.length - 2;
+
+                if (this.state.interval > backgroundLength) {
+                    this.changeInterval(0);
                 }
-                if (this.state.beforeInterval > 6) {
-                    this.changeBeforeInterval(1);
+                if (this.state.beforeInterval > backgroundLength) {
+                    this.changeBeforeInterval(0);
                 }
-            }, 8000)
+            }, 6000)
         });
     }
 
