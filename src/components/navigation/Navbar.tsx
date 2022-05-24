@@ -8,7 +8,6 @@ export class Navbar extends React.Component <NavbarProps> {
         
         this.Profile = this.Profile.bind(this);
         this.Projects = this.Projects.bind(this);
-        this.ContactMe = this.ContactMe.bind(this);
         this.AboutMe = this.AboutMe.bind(this);
     }
 
@@ -20,12 +19,8 @@ export class Navbar extends React.Component <NavbarProps> {
         this.props.changePage(1);
     }
 
-    ContactMe(){
-        this.props.changePage(2);
-    }
-
     AboutMe(){
-        this.props.changePage(3);
+        this.props.changePage(2);
     }
 
     render(): React.ReactNode {
