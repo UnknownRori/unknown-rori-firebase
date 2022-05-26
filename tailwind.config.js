@@ -22,16 +22,6 @@ module.exports = {
                         transform: 'translateX(0px)'
                     }
                 },
-                fadeInRight: {
-                    '0%': {
-                        opacity: '0%',
-                        transform: 'translateX(100vw)'
-                    },
-                    '100%': {
-                        opacity: '100%',
-                        transform: 'translateX(0px)'
-                    }
-                },
                 fadeOutLeft: {
                     '0%': {
                         opacity: '100%',
@@ -41,23 +31,11 @@ module.exports = {
                         opacity: '0%',
                         transform: 'translateX(-100vw)',
                     }
-                },
-                fadeOutRight: {
-                    '0%': {
-                        opacity: '100%',
-                        transform: 'translateX(0vw)'
-                    },
-                    '100%': {
-                        opacity: '100%',
-                        transform: 'translateX(100vw)',
-                    }
                 }
             },
             animation: {
                 fadeInLeft: 'fadeInLeft 1s ease-in-out forwards',
-                fadeInRight: 'fadeInRight 1s ease-in-out forwards',
                 fadeOutLeft: 'fadeOutLeft 1s ease-in-out forwards',
-                fadeOutRight: 'fadeOutRight 1s ease-in-out forwards',
             }
         },
     },

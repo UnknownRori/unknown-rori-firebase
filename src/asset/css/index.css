@@ -8,7 +8,7 @@
 
 @layer components {
     .wrapper {
-        @apply md:w-8/12 m-auto;
+        @apply md:w-11/12 m-auto;
     }
 
     .background {

@@ -25,7 +25,7 @@ export class Navbar extends React.Component <NavbarProps> {
 
     render(): React.ReactNode {
         return (
-            <nav className="bg-gray-200 bg-opacity-20 fixed w-screen p-4">
+            <nav className="bg-gray-200 bg-opacity-20 fixed w-screen p-4 z-20">
                 <div className="wrapper">
                     <ul className="flex flex-row-reverse">
                         <li className="nav-item">

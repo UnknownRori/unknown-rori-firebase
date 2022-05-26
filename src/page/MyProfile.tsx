@@ -1,14 +1,14 @@
 import React from "react";
-import { Background } from "../components/animation/Background";
+import { PageAnimation } from "../components/animation/PageAnimation";
 import { Profile } from "../components/profile/Profile";
-import { PageProps } from "../interface/Page";
 
-export class MyProfilePage extends React.Component <PageProps> {
+export class MyProfilePage extends PageAnimation {
     render(): React.ReactNode {
+        const animate = this.pageAnimation();
+
         return (
             <>
-                <Background />
-                <div className="wrapper">
+                <div className={"wrapper " + animate}>
                     <Profile />
                 </div>
             </>

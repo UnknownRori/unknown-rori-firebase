@@ -1,4 +1,5 @@
 import React, { ReactPropTypes } from "react";
+import { Background } from "./components/animation/Background";
 import { Footer } from './components/navigation/Footer';
 import { Navbar } from './components/navigation/Navbar';
 import { Sidebar } from './components/navigation/Sidebar';
@@ -9,11 +10,12 @@ import { MyProjectsPage } from "./page/MyProjects";
 class App extends React.Component {
     public state = {
         listPage: [
-            <MyProfilePage isNext={false} isPrevious={false} />, 
-            <MyProjectsPage isNext={false} isPrevious={false} />, 
-            <AboutMePage isNext={false} isPrevious={false} />
+            <MyProfilePage animateIn={false} animateOut={false}/>, 
+            <MyProjectsPage animateIn={false} animateOut={false}/>, 
+            <AboutMePage animateIn={false} animateOut={false}/>
         ],
         page: {
+            page: <MyProfilePage animateIn={false} animateOut={false} />,
             targetPageNumber: 0,
             currentPageNumber: 0,
         }
@@ -32,50 +34,52 @@ class App extends React.Component {
                 targetPageNumber: number
             }
         }, () => {
-            const interval = setInterval(() => {
+            // Set the current page to animate out
+            this.setState({
+                page: {
+                    ...this.state.page,
+                    page: React.cloneElement(this.state.listPage[this.state.page.currentPageNumber], {
+                        animateOut: true
+                    })
+                }
+            });
+
+            // After animation set the current page to target page with fade in animation
+            setTimeout(() => {
                 this.setState({
                     page: {
                         ...this.state.page,
-                        currentPageNumber: this.state.page.targetPageNumber > this.state.page.currentPageNumber ?
-                            this.state.page.currentPageNumber + 1 : this.state.page.currentPageNumber - 1
+                        currentPageNumber: this.state.page.targetPageNumber,
+                        page: React.cloneElement(this.state.listPage[this.state.page.targetPageNumber], {
+                            animateIn: true
+                        })
                     }
                 }, () => {
-                    if (this.state.page.currentPageNumber == this.state.page.targetPageNumber) clearInterval(interval);
+                    setTimeout(() => {
+                        this.setState({
+                            page: {
+                                ...this.state.page,
+                                page: this.state.listPage[this.state.page.currentPageNumber]
+                            }
+                        });
+                    }, 1000);
                 });
-
             }, 1000);
+            
         });
     }
 
     render(): React.ReactNode {
-        let lastPage;
-        let nextPage;
-
-        const currentPage = this.state.listPage[this.state.page.currentPageNumber];
-
-        if(this.state.listPage[this.state.page.currentPageNumber + 1]){
-            nextPage = React.cloneElement(this.state.listPage[this.state.page.currentPageNumber + 1], {
-                isNext: true,
-                isPrevious: false,
-            });
-        }
-
-        if(this.state.listPage[this.state.page.currentPageNumber - 1]) {
-            lastPage = React.cloneElement(this.state.listPage[this.state.page.currentPageNumber - 1], {
-                isNext: false,
-                isPrevious: true
-            });
-        }
+        const currentPage = this.state.page.page;
 
         return (
             <>
+                <Background />
                 <div className='min-h-screen flex'>
                     <Navbar changePage={this.changePage} />
                     <Sidebar />
                     <>
-                        {nextPage}
                         {currentPage}
-                        {lastPage}
                     </>
                     <Footer />
                 </div>
