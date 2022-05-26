@@ -17,7 +17,7 @@ module.exports = {
                         opacity: '0%',
                         transform: 'translateX(-100vw)'
                     },
-                    '100': {
+                    '100%': {
                         opacity: '100%',
                         transform: 'translateX(0px)'
                     }
@@ -27,34 +27,37 @@ module.exports = {
                         opacity: '0%',
                         transform: 'translateX(100vw)'
                     },
-                    '100': {
+                    '100%': {
                         opacity: '100%',
                         transform: 'translateX(0px)'
                     }
                 },
                 fadeOutLeft: {
                     '0%': {
-                        opacity: '0%',
+                        opacity: '100%',
                         transform: 'translateX(0vw)'
                     },
-                    '100': {
-                        opacity: '100%',
-                        transform: 'translateX(-100px)'
+                    '100%': {
+                        opacity: '0%',
+                        transform: 'translateX(-100vw)',
                     }
                 },
                 fadeOutRight: {
                     '0%': {
-                        opacity: '0%',
+                        opacity: '100%',
                         transform: 'translateX(0vw)'
                     },
-                    '100': {
+                    '100%': {
                         opacity: '100%',
-                        transform: 'translateX(100px)'
+                        transform: 'translateX(100vw)',
                     }
                 }
             },
             animation: {
-                fadeIn: 'fadeIn 1s ease-in-out'
+                fadeInLeft: 'fadeInLeft 1s ease-in-out forwards',
+                fadeInRight: 'fadeInRight 1s ease-in-out forwards',
+                fadeOutLeft: 'fadeOutLeft 1s ease-in-out forwards',
+                fadeOutRight: 'fadeOutRight 1s ease-in-out forwards',
             }
         },
     },
