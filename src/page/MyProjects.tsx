@@ -1,5 +1,6 @@
 import React from "react";
 import { PageAnimation } from "../components/animation/PageAnimation";
+import { ProjectsList } from "../components/projects/ProjectsList";
 
 export class MyProjectsPage extends PageAnimation {
     render(): React.ReactNode {
@@ -8,7 +9,7 @@ export class MyProjectsPage extends PageAnimation {
         return (
             <>
                 <div className={"wrapper " + animate}>
-                    <h1 className="text-3xl">This place will be my project</h1>
+                    <ProjectsList/>
                 </div>
             </>
         );
