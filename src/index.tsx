@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './asset/css/index.css';
+import './asset/css/scroll.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
