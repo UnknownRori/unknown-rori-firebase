@@ -10,28 +10,32 @@ import { MyProjectsPage } from "./page/MyProjects";
 class App extends React.Component {
     public state = {
         listPage: [
-            <MyProfilePage animateIn={false} animateOut={false}/>, 
-            <MyProjectsPage animateIn={false} animateOut={false}/>, 
-            <AboutMePage animateIn={false} animateOut={false}/>
+            <MyProfilePage animateIn={false} animateOut={false} />,
+            <MyProjectsPage animateIn={false} animateOut={false} />,
+            <AboutMePage animateIn={false} animateOut={false} />
         ],
         page: {
             page: <MyProfilePage animateIn={false} animateOut={false} />,
             targetPageNumber: 0,
             currentPageNumber: 0,
+            currentlyChange: false,
         }
     };
 
-    constructor(props: ReactPropTypes){
+    constructor(props: ReactPropTypes) {
         super(props);
-        
+
         this.changePage = this.changePage.bind(this);
     }
 
-    changePage(number: number){
+    changePage(number: number) {
+        if (this.state.page.currentlyChange) return;
+
         this.setState({
             page: {
                 ...this.state.page,
-                targetPageNumber: number
+                targetPageNumber: number,
+                currentlyChange: true,
             }
         }, () => {
             // Set the current page to animate out
@@ -55,17 +59,18 @@ class App extends React.Component {
                         })
                     }
                 }, () => {
+                    // Reset animation status
                     setTimeout(() => {
                         this.setState({
                             page: {
                                 ...this.state.page,
-                                page: this.state.listPage[this.state.page.currentPageNumber]
+                                page: this.state.listPage[this.state.page.currentPageNumber],
+                                currentlyChange: false,
                             }
                         });
                     }, 1000);
                 });
             }, 1000);
-            
         });
     }
 
