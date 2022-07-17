@@ -15,12 +15,12 @@ export class AboutMe extends React.Component {
             name: 'UnknownRori',
         },
         icons: [
-            { className: "rounded-lg w-20 hover:translate-y-2", href: "https://getbootstrap.com/", img: Bootstrap, alt: "Bootstrap" },
-            { className: "rounded-lg w-20 hover:translate-y-2", href: "https://laravel.com", img: Laravel, alt: "Laravel" },
-            { className: "rounded-lg w-20 hover:translate-y-2", href: "https://reactjs.org/", img: ReactIcon, alt: "React" },
-            { className: "rounded-lg w-20 hover:translate-y-2", href: "https://tailwindcss.com/", img: TailwindCSS, alt: "Tailwind CSS" },
-            { className: "rounded-lg w-20 hover:translate-y-2", href: "https://typescriptlang.org/", img: Typescript, alt: "Typescript" },
-            { className: "rounded-lg w-20 hover:translate-y-2", href: "https://vuejs.org/", img: Vue, alt: "Vue" },
+            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://getbootstrap.com/", img: Bootstrap, alt: "Bootstrap" },
+            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://laravel.com", img: Laravel, alt: "Laravel" },
+            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://reactjs.org/", img: ReactIcon, alt: "React" },
+            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://tailwindcss.com/", img: TailwindCSS, alt: "Tailwind CSS" },
+            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://typescriptlang.org/", img: Typescript, alt: "Typescript" },
+            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://vuejs.org/", img: Vue, alt: "Vue" },
         ] as IconProps[]
     };
 
@@ -72,7 +72,7 @@ export class AboutMe extends React.Component {
                         I'am very confident for working alongside with these tooling.
                     </p>
 
-                    <div className="flex flex-row text-center justify-center flex-wrap w-[40%] mt-5 mx-auto">
+                    <div className="flex flex-row text-center justify-center flex-wrap md:w-[60%] mt-5 mx-auto">
                         {skillIcons}
                     </div>
                 </div>
