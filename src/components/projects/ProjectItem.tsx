@@ -9,7 +9,7 @@ export class ProjectItem extends React.Component<{ project: projectItem }> {
             hover:z-20 hover:-translate-y-5 hover:bg-gray-800 hover:bg-opacity-95 hover:ring-gray-600 
             hover:shadow-md"
             >
-                <p className="fixed z-50 bg-gray-800 bg-opacity-80 rounded opacity-0 shadow-2xl w-[90%] group-hover:opacity-100 duration-1000">
+                <p className="fixed pointer-events-none bg-gray-800 bg-opacity-80 rounded opacity-0 shadow-2xl w-[90%] group-hover:opacity-100 duration-1000">
                     {this.props.project.description}
                 </p>
                 <a href={this.props.project.link} target="_blank">
