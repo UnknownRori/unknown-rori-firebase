@@ -2,7 +2,7 @@ import React from "react";
 import { PageProps } from "../../interface/Page";
 
 
-export abstract class PageAnimation extends React.Component<PageProps> {
+export default abstract class PageAnimation extends React.Component<PageProps> {
     protected pageAnimation() {
         let animate;
 

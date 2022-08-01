@@ -1,8 +1,8 @@
 import React from "react";
 import { AboutMe } from "../components/aboutme/AboutMe";
-import { PageAnimation } from "../components/animation/PageAnimation";
+import PageAnimation from "../components/animation/PageAnimation";
 
-export class AboutMePage extends PageAnimation {
+export default class AboutMePage extends PageAnimation {
     render(): React.ReactNode {
         const animate = this.pageAnimation();
 
