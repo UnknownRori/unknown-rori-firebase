@@ -1,12 +1,6 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
-import Bootstrap from "../../asset/image/icons/bootstrap.webp";
-import Laravel from "../../asset/image/icons/laravel.webp";
-import ReactIcon from "../../asset/image/icons/react.webp";
-import TailwindCSS from "../../asset/image/icons/tailwind.webp";
-import Typescript from "../../asset/image/icons/typescript.webp";
-import Vue from "../../asset/image/icons/vue.webp";
-import { IconProps } from "../../interface/Icon";
+import ToolingIconList from "../../data/ToolingIconList";
 import { Icon } from "../social/Icon";
 
 export class AboutMe extends React.Component {
@@ -14,19 +8,12 @@ export class AboutMe extends React.Component {
         profile: {
             name: 'UnknownRori',
         },
-        icons: [
-            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://getbootstrap.com/", img: Bootstrap, alt: "Bootstrap" },
-            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://laravel.com", img: Laravel, alt: "Laravel" },
-            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://reactjs.org/", img: ReactIcon, alt: "React" },
-            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://tailwindcss.com/", img: TailwindCSS, alt: "Tailwind CSS" },
-            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://typescriptlang.org/", img: Typescript, alt: "Typescript" },
-            { className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://vuejs.org/", img: Vue, alt: "Vue" },
-        ] as IconProps[]
+        icons: ToolingIconList
     };
 
     render(): React.ReactNode {
         const skillIcons = this.state.icons.map((icon) =>
-            <Icon className={icon.className} href={icon.href} img={icon.img} alt={icon.alt} />
+            <Icon icon={icon} key={icon.id} />
         );
 
         return (

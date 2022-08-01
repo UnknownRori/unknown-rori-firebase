@@ -9,7 +9,7 @@ export class SocialList extends React.Component {
 
     render(): React.ReactNode {
         const socialIconList = this.state.icons.map((icon) =>
-            <Icon className={icon.className} href={icon.href} img={icon.img} alt={icon.alt} />
+            <Icon key={icon.id} icon={icon} />
         );
 
         return (
