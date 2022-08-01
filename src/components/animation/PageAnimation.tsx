@@ -4,13 +4,13 @@ import { PageProps } from "../../interface/Page";
 
 export default abstract class PageAnimation extends React.Component<PageProps> {
     protected pageAnimation() {
-        let animate;
+        let animate = '';
 
-        if (this.props.animateIn) {
+        if (this.props.animateIn)
             animate = 'animate-fadeInLeft ';
-        } else if (this.props.animateOut) {
+        else if (this.props.animateOut)
             animate = 'animate-fadeOutLeft ';
-        }
+
         return animate;
     }
 }
