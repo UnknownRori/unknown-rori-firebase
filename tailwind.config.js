@@ -24,8 +24,11 @@ module.exports = {
                 },
                 fadeOutLeft: {
                     '0%': {
-                        opacity: '100%',
                         transform: 'translateX(0vw)'
+                    },
+                    '15%': {
+                        opacity: '100%',
+                        transform: 'translateX(2vw)'
                     },
                     '100%': {
                         opacity: '0%',
