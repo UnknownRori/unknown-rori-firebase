@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { projectItem } from "../../interface/ProjectItem";
+import LazyLoadImage from "../animation/LazyLoadImage";
 
 export class ProjectItem extends React.Component<{ project: projectItem }> {
     render(): ReactNode {
@@ -15,7 +16,7 @@ export class ProjectItem extends React.Component<{ project: projectItem }> {
                     {this.props.project.description}
                 </p>
                 <a href={this.props.project.link} target="_blank">
-                    <img className="ring-1 ring-gray-700 rounded" src={this.props.project.image} alt={this.props.project.title} />
+                    <LazyLoadImage className="ring-1 ring-gray-700 rounded" src={this.props.project.image} alt={this.props.project.title} />
                     <h2 className="m-2 text-center md:text-xl sm:text-sm">
                         {this.props.project.title}
                     </h2>
