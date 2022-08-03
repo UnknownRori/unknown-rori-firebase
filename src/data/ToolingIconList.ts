@@ -1,4 +1,4 @@
-import { IconProps } from "../interface/Icon";
+import IconProps from "../interface/Icon";
 
 import Bootstrap from "../asset/image/icons/bootstrap.webp";
 import Laravel from "../asset/image/icons/laravel.webp";

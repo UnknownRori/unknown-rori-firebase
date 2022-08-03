@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../interface/Icon";
+import IconProps from "../../interface/Icon";
 
 export class Icon extends React.Component<{ icon: IconProps }> {
     render(): React.ReactNode {

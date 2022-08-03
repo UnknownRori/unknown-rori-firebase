@@ -1,4 +1,4 @@
-export type IconProps = {
+export default interface IconProps {
     id: number,
     href: string,
     img: string,
