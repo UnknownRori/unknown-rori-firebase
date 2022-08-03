@@ -1,25 +1,25 @@
 import React from "react";
-import { NavbarProps } from "../../interface/NavbarProps";
+import NavbarProps from "../../interface/NavbarProps";
 
-export class Navbar extends React.Component <NavbarProps> {
+export class Navbar extends React.Component<NavbarProps> {
 
-    constructor(props: NavbarProps){
+    constructor(props: NavbarProps) {
         super(props);
-        
+
         this.Profile = this.Profile.bind(this);
         this.Projects = this.Projects.bind(this);
         this.AboutMe = this.AboutMe.bind(this);
     }
 
-    Profile(){
+    Profile() {
         this.props.changePage(0);
     }
 
-    Projects(){
+    Projects() {
         this.props.changePage(1);
     }
 
-    AboutMe(){
+    AboutMe() {
         this.props.changePage(2);
     }
 
