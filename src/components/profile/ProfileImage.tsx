@@ -2,7 +2,7 @@ import React from "react";
 import LazyLoadImage from "../animation/LazyLoadImage";
 import profile from './../../asset/image/UnknownRori.webp';
 
-export class ProfileImage extends React.Component {
+export default class ProfileImage extends React.Component {
     render(): React.ReactNode {
         return (
             <figure className="m-auto rounded-full p-3 shadow-lg">
