@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutMe } from "../components/aboutme/AboutMe";
+import AboutMe from "../components/aboutme/AboutMe";
 import PageAnimation from "../components/animation/PageAnimation";
 
 export default class AboutMePage extends PageAnimation {

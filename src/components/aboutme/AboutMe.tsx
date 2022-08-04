@@ -3,7 +3,7 @@ import ReactTypingEffect from "react-typing-effect";
 import ToolingIconList from "../../data/ToolingIconList";
 import { Icon } from "../social/Icon";
 
-export class AboutMe extends React.Component {
+export default class AboutMe extends React.Component {
     public state = {
         profile: {
             name: 'UnknownRori',
