@@ -5,9 +5,9 @@ import background3 from './../../asset/image/background/background3.webp';
 import background4 from './../../asset/image/background/background4.webp';
 import background5 from './../../asset/image/background/background5.webp';
 import background6 from './../../asset/image/background/background6.webp';
-import { BackgroundItem } from './BackgroundItem';
+import BackgroundItem from './BackgroundItem';
 
-export class Background extends React.Component {
+export default class Background extends React.Component {
     public state = {
         backgrounds: [background1, background2, background3, background4, background5, background6],
         interval: 0,
@@ -15,14 +15,14 @@ export class Background extends React.Component {
         backgroundInterval: undefined
     };
 
-    constructor(props: ReactPropTypes){
+    constructor(props: ReactPropTypes) {
         super(props);
 
         this.changeInterval = this.changeInterval.bind(this);
         this.changeBeforeInterval = this.changeBeforeInterval.bind(this);
     }
 
-    changeBeforeInterval(number: number){
+    changeBeforeInterval(number: number) {
         this.setState({
             beforeInterval: number
         });
@@ -34,7 +34,7 @@ export class Background extends React.Component {
         });
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.setState({
             backgroundInterval: setInterval(() => {
                 this.changeInterval(this.state.interval + 1);
