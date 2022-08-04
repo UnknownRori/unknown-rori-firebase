@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { projectItem } from "../../interface/ProjectItem";
 import LazyLoadImage from "../animation/LazyLoadImage";
 
-export class ProjectItem extends React.Component<{ project: projectItem }> {
+export default class ProjectItem extends React.Component<{ project: projectItem }> {
     render(): ReactNode {
         return (
             <div title={this.props.project.description} className="group lg:w-3/12 md:w-6/12 sm:w-6/12 

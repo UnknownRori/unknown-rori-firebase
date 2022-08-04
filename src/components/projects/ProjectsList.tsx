@@ -1,9 +1,9 @@
 import React from "react";
-import { ProjectItem } from "./ProjectItem";
+import ProjectItem from "./ProjectItem";
 import ReactTypingEffect from "react-typing-effect";
 import ProjectList from "../../data/ProjectList";
 
-export class ProjectsList extends React.Component {
+export default class ProjectsList extends React.Component {
     public state = {
         projects: ProjectList
     };
