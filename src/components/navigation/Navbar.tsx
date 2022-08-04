@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarProps from "../../interface/NavbarProps";
 
-export class Navbar extends React.Component<NavbarProps> {
+export default class Navbar extends React.Component<NavbarProps> {
 
     constructor(props: NavbarProps) {
         super(props);

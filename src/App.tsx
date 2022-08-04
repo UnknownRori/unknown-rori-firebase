@@ -1,8 +1,8 @@
 import React, { ReactPropTypes } from "react";
 import Background from "./components/animation/Background";
-import { Footer } from './components/navigation/Footer';
-import { Navbar } from './components/navigation/Navbar';
-import { Sidebar } from './components/navigation/Sidebar';
+import Footer from './components/navigation/Footer';
+import Navbar from './components/navigation/Navbar';
+import Sidebar from './components/navigation/Sidebar';
 import AboutMePage from "./page/AboutMe";
 import MyProfilePage from './page/MyProfile';
 import MyProjectsPage from "./page/MyProjects";

@@ -2,7 +2,7 @@ import React from "react";
 import { SocialList } from "../social/SocialList";
 import arrow from './../../asset/image/white-arrow.webp';
 
-export class Sidebar extends React.Component{
+export default class Sidebar extends React.Component {
     render(): React.ReactNode {
         return (
             <div className="top-44 fixed">
