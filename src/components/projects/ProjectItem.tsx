@@ -10,8 +10,8 @@ export class ProjectItem extends React.Component<{ project: projectItem }> {
             hover:z-20 hover:-translate-y-5 hover:bg-gray-800 hover:bg-opacity-95 hover:ring-gray-600 
             hover:shadow-md"
             >
-                <p className="fixed pointer-events-none p-2 sm:text-sm md:text-md lg:text-md
-                bg-gray-800 bg-opacity-80 rounded opacity-0 shadow-2xl w-[88%] 
+                <p className="z-50 fixed pointer-events-none p-2 sm:text-sm md:text-md lg:text-md
+                bg-gray-800 bg-opacity-80 rounded opacity-0 shadow-2xl w-[88%]
                 group-hover:opacity-100 duration-1000">
                     {this.props.project.description}
                 </p>
