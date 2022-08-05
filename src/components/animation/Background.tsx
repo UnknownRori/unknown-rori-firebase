@@ -1,4 +1,4 @@
-import React, { ReactPropTypes } from 'react';
+import { useEffect, useState } from 'react';
 import background1 from './../../asset/image/background/background1.webp';
 import background2 from './../../asset/image/background/background2.webp';
 import background3 from './../../asset/image/background/background3.webp';
@@ -7,63 +7,49 @@ import background5 from './../../asset/image/background/background5.webp';
 import background6 from './../../asset/image/background/background6.webp';
 import BackgroundItem from './BackgroundItem';
 
-export default class Background extends React.Component {
-    public state = {
-        backgrounds: [background1, background2, background3, background4, background5, background6],
+const BackgroundImages = [
+    background1, background2, background3, background4, background5, background6
+];
+
+const Background = () => {
+    const [state, setState] = useState({
+        backgrounds: BackgroundImages,
         interval: 0,
-        beforeInterval: 6,
-        backgroundInterval: undefined
-    };
+        beforeInterval: BackgroundImages.length,
+    });
 
-    constructor(props: ReactPropTypes) {
-        super(props);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setState({
+                ...state,
+                interval: state.interval + 1,
+                beforeInterval: state.beforeInterval + 1,
+            });
 
-        this.changeInterval = this.changeInterval.bind(this);
-        this.changeBeforeInterval = this.changeBeforeInterval.bind(this);
-    }
+            const backgroundLength = state.backgrounds.length - 2;
 
-    changeBeforeInterval(number: number) {
-        this.setState({
-            beforeInterval: number
-        });
-    }
+            if (state.interval > backgroundLength) {
+                setState({ ...state, interval: 0 });
+            }
+            if (state.beforeInterval > backgroundLength) {
+                setState({ ...state, beforeInterval: 0 });
+            }
+        }, 6000);
 
-    changeInterval(number: number) {
-        this.setState({
-            interval: number
-        });
-    }
+        return function () {
+            clearInterval(interval);
+        };
+    }, [state]);
 
-    componentDidMount() {
-        this.setState({
-            backgroundInterval: setInterval(() => {
-                this.changeInterval(this.state.interval + 1);
-                this.changeBeforeInterval(this.state.beforeInterval + 1);
+    const backgroundList = state.backgrounds.map((background, index) => {
+        return (<BackgroundItem image={background} opacity={state.interval == index ? 1 : 0} key={index} />);
+    });
 
-                const backgroundLength = this.state.backgrounds.length - 2;
+    return (
+        <div className='fixed background'>
+            {backgroundList}
+        </div>
+    );
+};
 
-                if (this.state.interval > backgroundLength) {
-                    this.changeInterval(0);
-                }
-                if (this.state.beforeInterval > backgroundLength) {
-                    this.changeBeforeInterval(0);
-                }
-            }, 6000)
-        });
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.state.backgroundInterval);
-    }
-
-    render(): React.ReactNode {
-        const backgroundList = this.state.backgrounds.map((background, index) => {
-            return (<BackgroundItem image={background} opacity={this.state.interval == index ? 1 : 0} key={index} />);
-        });
-        return (
-            <div className='fixed background'>
-                {backgroundList}
-            </div>
-        );
-    }
-}
+export default Background;
