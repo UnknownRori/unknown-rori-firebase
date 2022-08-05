@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { projectItem } from "../../interface/ProjectItem";
+import { projectItem } from "../../types/ProjectItem";
 import LazyLoadImage from "../animation/LazyLoadImage";
 
 export default class ProjectItem extends React.Component<{ project: projectItem }> {

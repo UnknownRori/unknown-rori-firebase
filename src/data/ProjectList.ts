@@ -1,4 +1,4 @@
-import { projectItem } from "../interface/ProjectItem";
+import { projectItem } from "../types/ProjectItem";
 
 import UnknownRoriPHP from "../asset/image/projects/php-framework.webp";
 import TicTacToe from "../asset/image/projects/tic-tac-toe.webp";

@@ -1,5 +1,5 @@
 import React from "react";
-import { PageProps } from "../../interface/Page";
+import { PageProps } from "../../types/Page";
 
 
 export default abstract class PageAnimation extends React.Component<PageProps> {

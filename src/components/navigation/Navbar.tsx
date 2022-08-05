@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarProps from "../../interface/NavbarProps";
+import NavbarProps from "../../types/NavbarProps";
 
 export default class Navbar extends React.Component<NavbarProps> {
 

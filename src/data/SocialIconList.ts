@@ -1,4 +1,4 @@
-import IconProps from "../interface/Icon";
+import IconProps from "../types/Icon";
 
 import github from '../asset/image/social/github.webp';
 import stackoverflow from '../asset/image/social/stackoverflow.webp';
