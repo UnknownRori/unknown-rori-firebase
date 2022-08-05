@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from './Icon';
+import Icon from './Icon';
 import SocialIconList from "../../data/SocialIconList";
 
 export class SocialList extends React.Component {

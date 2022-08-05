@@ -1,7 +1,7 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import ToolingIconList from "../../data/ToolingIconList";
-import { Icon } from "../social/Icon";
+import Icon from "../social/Icon";
 
 export default class AboutMe extends React.Component {
     public state = {

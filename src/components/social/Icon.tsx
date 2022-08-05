@@ -1,7 +1,7 @@
 import React from "react";
 import IconProps from "../../interface/Icon";
 
-export class Icon extends React.Component<{ icon: IconProps }> {
+export default class Icon extends React.Component<{ icon: IconProps }> {
     render(): React.ReactNode {
         return (
             <a target='_blank' href={this.props.icon.href} className='m-2'>
