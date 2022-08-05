@@ -1,9 +1,7 @@
-import React from "react";
+const BackgroundItem = (props: { image: string, opacity: number }) => {
+    return (
+        <img src={props.image} style={{ 'opacity': props.opacity }} className='background' alt="" />
+    );
+};
 
-export default class BackgroundItem extends React.Component<{ image: string, opacity: number }> {
-    render(): React.ReactNode {
-        return (
-            <img src={this.props.image} style={{ 'opacity': this.props.opacity }} className='background' alt="" />
-        );
-    }
-}
+export default BackgroundItem;
