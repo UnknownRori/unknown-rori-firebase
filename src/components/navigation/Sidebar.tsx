@@ -1,4 +1,4 @@
-import { SocialList } from "../social/SocialList";
+import SocialList from "../social/SocialList";
 import arrow from './../../asset/image/white-arrow.webp';
 
 export default function Sidebar() {
