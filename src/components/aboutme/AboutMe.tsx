@@ -1,18 +1,12 @@
-import { useState } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import ToolingIconList from "../../data/ToolingIconList";
 import IconProps from "../../types/Icon";
 import Icon from "../social/Icon";
 
-const AboutMe = () => {
-    const [state] = useState({
-        profile: {
-            name: 'UnknownRori',
-        },
-        icons: ToolingIconList
-    });
+export default function AboutMe() {
+    const icons = ToolingIconList;
 
-    const skillIcons = state.icons.map((icon: IconProps) =>
+    const skillIcons = icons.map((icon: IconProps) =>
         <Icon icon={icon} key={icon.id} />
     );
 
@@ -68,6 +62,4 @@ const AboutMe = () => {
 
         </div>
     );
-};
-
-export default AboutMe;
+}
