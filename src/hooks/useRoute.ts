@@ -4,31 +4,32 @@ const DELAY_BETWEEN_ANIMATION = 1000;
 
 type ReturningValue = [
     JSX.Element,
-    (targetNumber: number) => void
+    (pageName: string) => void
 ];
 
-export default function useRoute(listPage: JSX.Element[]): ReturningValue {
+export default function useRoute(router: Map<string, JSX.Element>): ReturningValue {
     const [state, setState] = useState({
-        page: listPage[0],
-        targetPageNumber: 0,
-        currentPageNumber: 0,
+        page: router.get(router.keys().next()['value']) as JSX.Element,
+        targetPage: router.keys().next()['value'],
+        currentPage: router.keys().next()['value'],
         currentlyChange: false,
     });
 
-    const changePage = (targetNumber: number) => {
+    const changePage = (pageName: string) => {
         if (state.currentlyChange) return;
+        if (!router.has(pageName)) throw `There is no ${pageName}`;
 
         // Set the target page
         setState({
             ...state,
-            targetPageNumber: targetNumber,
+            targetPage: pageName,
             currentlyChange: true
         });
 
         // Set the current page to animate out
         setState((state) => ({
             ...state,
-            page: React.cloneElement(listPage[state.currentPageNumber], {
+            page: React.cloneElement(router.get(state.currentPage) as JSX.Element, {
                 animateOut: true,
             })
         }));
@@ -38,8 +39,8 @@ export default function useRoute(listPage: JSX.Element[]): ReturningValue {
         setTimeout(() => {
             setState((state) => ({
                 ...state,
-                currentPageNumber: state.targetPageNumber,
-                page: React.cloneElement(listPage[state.targetPageNumber], {
+                currentPage: state.targetPage,
+                page: React.cloneElement(router.get(state.targetPage) as JSX.Element, {
                     animateIn: true
                 })
             }));
@@ -48,7 +49,7 @@ export default function useRoute(listPage: JSX.Element[]): ReturningValue {
                 // Reset animation status
                 setState((state) => ({
                     ...state,
-                    page: listPage[state.currentPageNumber],
+                    page: router.get(state.currentPage) as JSX.Element,
                     currentlyChange: false,
                 }));
 
