@@ -1,4 +1,4 @@
-import { PageProps } from "../types/Page";
+import PageProps from "../types/PageProps";
 
 export default function usePageAnimation(props: PageProps): string {
     let animate = '';
