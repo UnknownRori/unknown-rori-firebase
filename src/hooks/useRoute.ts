@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+const DELAY_BETWEEN_ANIMATION = 1000;
+
 type ReturningValue = [
     JSX.Element,
     (targetNumber: number) => void
@@ -50,9 +52,9 @@ export default function useRoute(listPage: JSX.Element[]): ReturningValue {
                     currentlyChange: false,
                 }));
 
-            }, 1000);
+            }, DELAY_BETWEEN_ANIMATION);
 
-        }, 1000);
+        }, DELAY_BETWEEN_ANIMATION);
     };
 
     return [state.page, changePage];
