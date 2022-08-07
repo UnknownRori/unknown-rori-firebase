@@ -2,10 +2,10 @@ import Background from "./components/animation/Background";
 import Footer from './components/navigation/Footer';
 import Navbar from './components/navigation/Navbar';
 import Sidebar from './components/navigation/Sidebar';
-import PageList from "./data/PageList";
 import useRoute from "./hooks/useRoute";
+import router from "./router/router";
 export default function App() {
-    const [currentPage, changePage] = useRoute(PageList);
+    const [currentPage, changePage] = useRoute(router);
 
     return (
         <>
