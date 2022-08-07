@@ -1,17 +1,15 @@
-import React from "react";
-import PageAnimation from "../components/animation/PageAnimation";
 import ProjectsList from "../components/projects/ProjectsList";
+import usePageAnimation from "../hooks/usePageAnimation";
+import { PageProps } from "../types/Page";
 
-export default class MyProjectsPage extends PageAnimation {
-    render(): React.ReactNode {
-        const animate = this.pageAnimation();
+export default function MyProjectsPage(props: PageProps) {
+    const animate = usePageAnimation(props);
 
-        return (
-            <>
-                <div className={"wrapper " + animate}>
-                    <ProjectsList />
-                </div>
-            </>
-        );
-    }
+    return (
+        <>
+            <div className={"wrapper " + animate}>
+                <ProjectsList />
+            </div>
+        </>
+    );
 }

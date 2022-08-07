@@ -1,17 +1,15 @@
-import React from "react";
 import AboutMe from "../components/aboutme/AboutMe";
-import PageAnimation from "../components/animation/PageAnimation";
+import usePageAnimation from "../hooks/usePageAnimation";
+import { PageProps } from "../types/Page";
 
-export default class AboutMePage extends PageAnimation {
-    render(): React.ReactNode {
-        const animate = this.pageAnimation();
+export default function AboutMePage(props: PageProps) {
+    const animate = usePageAnimation(props);
 
-        return (
-            <>
-                <div className={"wrapper " + animate}>
-                    <AboutMe />
-                </div>
-            </>
-        );
-    }
+    return (
+        <>
+            <div className={"wrapper " + animate}>
+                <AboutMe />
+            </div>
+        </>
+    );
 }
