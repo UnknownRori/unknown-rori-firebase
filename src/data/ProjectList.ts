@@ -1,4 +1,4 @@
-import { projectItem } from "../types/ProjectItem";
+import ProjectItemProps from "../types/ProjectItemProps";
 
 import UnknownRoriPHP from "../asset/image/projects/php-framework.webp";
 import TicTacToe from "../asset/image/projects/tic-tac-toe.webp";
@@ -14,4 +14,4 @@ export default [
     { id: 4, title: 'Piano Tiles', link: "https://unknownrori.github.io/piano-tiles/", image: PianoTiles, description: "A rhythmic piano game written in Typescript" },
     { id: 5, title: 'Personal Portfolio', link: "https://unknownrori-firebase.web.app/", image: PersonalPortfolio, description: "That's the page you viewing right now" },
     { id: 6, title: 'Fake E-Commerce', link: "https://github.com/UnknownRori/fake-e-commerce-laravel-app", image: FakeECommerceApp, description: "A simple commerce web app." },
-] as projectItem[];
+] as ProjectItemProps[];
