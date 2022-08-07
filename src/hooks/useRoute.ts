@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 
 const DELAY_BETWEEN_ANIMATION = 1000;
 
+export type ChangePage = (pageName: string) => void;
+
 type ReturningValue = [
     JSX.Element,
-    (pageName: string) => void
+    ChangePage
 ];
 
 /**
