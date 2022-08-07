@@ -1,9 +1,7 @@
 import BackgroundItemProps from "../../types/BackgroundItemProps";
 
-const BackgroundItem = (props: BackgroundItemProps) => {
+export default function BackgroundItem(props: BackgroundItemProps) {
     return (
         <img src={props.image} style={{ 'opacity': props.opacity }} className='background' alt="" />
     );
-};
-
-export default BackgroundItem;
+}

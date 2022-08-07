@@ -2,8 +2,9 @@ import useBackgroundAnimation from '../../hooks/useBackgroundAnimation';
 import BackgroundItem from './BackgroundItem';
 import BackgroundImages from '../../data/Background';
 
-const Background = () => {
+export default function Background() {
     const [interval] = useBackgroundAnimation(BackgroundImages);
+
     const backgroundList = BackgroundImages.map((background, index) => {
         return (<BackgroundItem image={background} opacity={interval == index ? 1 : 0} key={index} />);
     });
@@ -13,6 +14,4 @@ const Background = () => {
             {backgroundList}
         </div>
     );
-};
-
-export default Background;
+}
