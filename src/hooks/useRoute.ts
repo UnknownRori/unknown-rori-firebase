@@ -7,6 +7,11 @@ type ReturningValue = [
     (pageName: string) => void
 ];
 
+/**
+ * My custom implementation fade in & fade out router
+ * @param  Map<string, JSX.Element> router
+ * @return [JSX.Element, (pageName: string) => void]
+ */
 export default function useRoute(router: Map<string, JSX.Element>): ReturningValue {
     const [state, setState] = useState({
         page: router.get(router.keys().next()['value']) as JSX.Element,
@@ -15,6 +20,11 @@ export default function useRoute(router: Map<string, JSX.Element>): ReturningVal
         currentlyChange: false,
     });
 
+    /**
+     * Change page API
+     * @param pageName 
+     * @returns void
+     */
     const changePage = (pageName: string) => {
         if (state.currentlyChange) return;
         if (!router.has(pageName)) throw `There is no ${pageName}`;
