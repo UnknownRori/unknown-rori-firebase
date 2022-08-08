@@ -15,10 +15,16 @@ type ReturningValue = [
  * @return [JSX.Element, (pageName: string) => void]
  */
 export default function useRoute(router: Map<string, JSX.Element>): ReturningValue {
+    const path = window.location.pathname;
+
+    const page = router.has(path) ? router.get(path) : router.get('404');
+    const targetPage = router.has(path) ? path : '404';
+    const currentPage = router.has(path) ? path : '404';
+
     const [state, setState] = useState({
-        page: router.get(router.keys().next()['value']) as JSX.Element,
-        targetPage: router.keys().next()['value'],
-        currentPage: router.keys().next()['value'],
+        page: page as JSX.Element,
+        targetPage: targetPage,
+        currentPage: currentPage,
         currentlyChange: false,
     });
 
