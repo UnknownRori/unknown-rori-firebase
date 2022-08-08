@@ -1,14 +1,10 @@
 import LinkProps from '../../types/LinkProps';
 
 export default function Link(props: LinkProps) {
-    const changePage = (pageName: string) => {
-        props.changePage(pageName);
-    };
-
     const action = (event: React.MouseEvent) => {
         event.preventDefault();
-        window.history.pushState('', '', props.href);
-        changePage(props.href);
+        if (props.changePage(props.href))
+            window.history.pushState('', '', props.href);
     };
 
     return (

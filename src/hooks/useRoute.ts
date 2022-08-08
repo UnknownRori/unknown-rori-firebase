@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const DELAY_BETWEEN_ANIMATION = 1000;
-
-export type ChangePage = (pageName: string) => void;
+const PAGE_NOT_FOUND = '404';
+export type ChangePage = (pageName: string) => boolean;
 
 type ReturningValue = [
     JSX.Element,
@@ -17,9 +17,9 @@ type ReturningValue = [
 export default function useRoute(router: Map<string, JSX.Element>): ReturningValue {
     const path = window.location.pathname;
 
-    const page = router.has(path) ? router.get(path) : router.get('404');
-    const targetPage = router.has(path) ? path : '404';
-    const currentPage = router.has(path) ? path : '404';
+    const page = router.has(path) ? router.get(path) : router.get(PAGE_NOT_FOUND);
+    const targetPage = router.has(path) ? path : PAGE_NOT_FOUND;
+    const currentPage = router.has(path) ? path : PAGE_NOT_FOUND;
 
     const [state, setState] = useState({
         page: page as JSX.Element,
@@ -33,9 +33,9 @@ export default function useRoute(router: Map<string, JSX.Element>): ReturningVal
      * @param pageName 
      * @returns void
      */
-    const changePage = (pageName: string) => {
-        if (state.currentlyChange) return;
-        if (!router.has(pageName)) throw `There is no ${pageName}`;
+    const changePage = (pageName: string): boolean => {
+        if (state.currentlyChange) return false;
+        if (!router.has(pageName)) return changePage(PAGE_NOT_FOUND);
 
         // Set the target page
         setState({
@@ -74,6 +74,8 @@ export default function useRoute(router: Map<string, JSX.Element>): ReturningVal
             }, DELAY_BETWEEN_ANIMATION);
 
         }, DELAY_BETWEEN_ANIMATION);
+
+        return true;
     };
 
     return [state.page, changePage];
