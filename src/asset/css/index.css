@@ -20,7 +20,7 @@
     }
 
     .nav-link {
-        @apply p-3 m-1;
+        @apply p-3;
     }
 
     .nav-item {
