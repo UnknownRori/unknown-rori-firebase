@@ -57,9 +57,6 @@ export default function AboutMe() {
                     {skillIcons}
                 </div>
             </div>
-
-
-
         </div>
     );
 }
