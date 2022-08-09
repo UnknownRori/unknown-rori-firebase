@@ -1,27 +1,11 @@
-import { useEffect, useState } from "react";
 import usePageAnimation from "../hooks/usePageAnimation";
+import useQuote from "../hooks/useQuote";
 import PageProps from "../types/PageProps";
-import QuoteAPI from '../types/QuoteAPI';
+
 
 export default function NotFound(props: PageProps) {
     const animate = usePageAnimation(props);
-
-    const [quote, setQuote] = useState<QuoteAPI>({
-        text: '',
-        author: '',
-    });
-
-    useEffect(() => {
-        fetch('https://type.fit/api/quotes', {
-            method: 'GET'
-        }).then(response => response.json())
-            .then((response) => {
-                const data = response as QuoteAPI[];
-                const rand = Math.floor(Math.random() * data.length);
-                const randomQuote = data[rand];
-                setQuote(randomQuote);
-            });
-    }, []);
+    const [quote] = useQuote();
 
     return (
         <div className={"wrapper " + animate}>
