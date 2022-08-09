@@ -4,7 +4,7 @@ import PageProps from "../types/PageProps";
 
 
 export default function NotFound(props: PageProps) {
-    const animate = usePageAnimation(props);
+    const [animate] = usePageAnimation(props);
     const [quote] = useQuote();
 
     return (

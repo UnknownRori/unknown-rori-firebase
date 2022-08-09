@@ -1,6 +1,8 @@
 import PageProps from "../types/PageProps";
 
-export default function usePageAnimation(props: PageProps): string {
+type ReturningType = [string];
+
+export default function usePageAnimation(props: PageProps): ReturningType {
     let animate = '';
 
     if (props.animateIn)
@@ -8,5 +10,5 @@ export default function usePageAnimation(props: PageProps): string {
     else if (props.animateOut)
         animate = 'animate-fadeOutLeft ';
 
-    return animate;
+    return [animate];
 }

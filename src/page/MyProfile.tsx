@@ -3,7 +3,7 @@ import usePageAnimation from "../hooks/usePageAnimation";
 import PageProps from "../types/PageProps";
 
 export default function MyProfilePage(props: PageProps) {
-    const animate = usePageAnimation(props);
+    const [animate] = usePageAnimation(props);
 
     return (
         <>
