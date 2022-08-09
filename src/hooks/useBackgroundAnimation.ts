@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+const BACKGROUND_INTERVAL = 6000;
+
 type BackgroundAnimationTypes = [
     number,
 ];
@@ -22,7 +24,7 @@ const useBackgroundAnimation = (BackgroundImages: string[]): BackgroundAnimation
                     interval: state.interval + 1,
                 });
 
-        }, 6000);
+        }, BACKGROUND_INTERVAL);
 
         return function () {
             clearInterval(interval);
