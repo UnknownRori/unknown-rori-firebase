@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+import { ChangePage, RouterContext } from '../../hooks/useRoute';
 import LinkProps from '../../types/LinkProps';
 
 export default function Link(props: LinkProps) {
+    const changePage = useContext(RouterContext) as ChangePage;
+
     const action = (event: React.MouseEvent) => {
         event.preventDefault();
-        if (props.changePage(props.href))
+        if (changePage(props.href))
             window.history.pushState('', '', props.href);
     };
 

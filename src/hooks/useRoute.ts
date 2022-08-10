@@ -9,6 +9,8 @@ type ReturningValue = [
     ChangePage
 ];
 
+export const RouterContext = React.createContext<ChangePage | null>(null);
+
 /**
  * My custom implementation fade in & fade out router
  * @param  Map<string, JSX.Element> router

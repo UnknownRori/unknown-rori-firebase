@@ -2,8 +2,9 @@ import Background from "./components/animation/Background";
 import Footer from './components/navigation/Footer';
 import Navbar from './components/navigation/Navbar';
 import Sidebar from './components/navigation/Sidebar';
-import useRoute from "./hooks/useRoute";
+import useRoute, { RouterContext } from "./hooks/useRoute";
 import router from "./router/router";
+
 export default function App() {
     const [currentPage, changePage] = useRoute(router);
 
@@ -11,7 +12,9 @@ export default function App() {
         <>
             <Background />
             <div className='min-h-screen flex'>
-                <Navbar changePage={changePage} />
+                <RouterContext.Provider value={changePage}>
+                    <Navbar />
+                </RouterContext.Provider>
                 <Sidebar />
                 <>
                     {currentPage}
