@@ -3,7 +3,7 @@ import arrow from './../../asset/image/white-arrow.webp';
 
 export default function Sidebar() {
     return (
-        <div className="top-44 fixed">
+        <div className="top-44 fixed z-10">
             <button className="button-secondary fixed m-3 -translate-x-8 w-12 transition-all duration-1000 group peer focus:translate-x-14 z-10">
                 <img src={arrow} alt="=>" className="group-focus:rotate-0 rotate-180 transition-all duration-1000" />
             </button>
