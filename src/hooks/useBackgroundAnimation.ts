@@ -6,7 +6,7 @@ type BackgroundAnimationTypes = [
     number,
 ];
 
-const useBackgroundAnimation = (BackgroundImages: string[]): BackgroundAnimationTypes => {
+export default function useBackgroundAnimation(BackgroundImages: string[]): BackgroundAnimationTypes {
     const [state, setState] = useState({
         backgrounds: BackgroundImages,
         interval: 0,
@@ -32,6 +32,4 @@ const useBackgroundAnimation = (BackgroundImages: string[]): BackgroundAnimation
     }, [state]);
 
     return [state.interval];
-};
-
-export default useBackgroundAnimation;
+}
