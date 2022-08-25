@@ -4,6 +4,7 @@ import IconProps from "../../types/Icon";
 import Icon from "../social/Icon";
 
 export default function AboutMe() {
+    const date = new Date();
     const icons = ToolingIconList;
 
     const skillIcons = icons.map((icon: IconProps) =>
@@ -11,7 +12,7 @@ export default function AboutMe() {
     );
 
     return (
-        <div className="bg-gray-700 rounded bg-opacity-75 p-4 mt-20">
+        <div className="bg-gray-700 rounded bg-opacity-75 p-4 mt-20 sm:m-8">
             <div>
                 <ReactTypingEffect text={
                     ['About me']
@@ -30,7 +31,7 @@ export default function AboutMe() {
                 <p>
                     Hello my name is <span className="profile-name">UnknownRori</span>. I'm a college student and now i
                     currently learning to become fullstack developer, i enjoy making a web apps using Laravel and TailwindCSS.
-                    I'm also interested on making software.
+                    I'm also interested on making game in C++.
                 </p>
             </article>
 
@@ -49,8 +50,8 @@ export default function AboutMe() {
                         }} typingDelay={500} />
                 </div>
                 <p>
-                    I been working on improving my PHP and Javascript skills for 2 years and
-                    I'am very confident for working alongside with these tooling.
+                    I been working on improving my PHP, Javascript, and other type of skills for {(date.getFullYear() - 2019)} years and
+                    I'am very confident for working alongside with these tooling and technology.
                 </p>
 
                 <div className="flex flex-row text-center justify-center flex-wrap md:w-[60%] mt-5 mx-auto">
