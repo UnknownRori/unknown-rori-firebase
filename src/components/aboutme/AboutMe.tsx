@@ -31,7 +31,7 @@ export default function AboutMe() {
                 <p>
                     Hello my name is <span className="profile-name">UnknownRori</span>. I'm a college student and now i
                     currently learning to become fullstack developer, i enjoy making a web apps using Laravel and TailwindCSS.
-                    I'm also interested on making game in C++.
+                    I'm also interested on making game in C++, some time i also make some fun web framework😄.
                 </p>
             </article>
 
@@ -54,7 +54,7 @@ export default function AboutMe() {
                     I'am very confident for working alongside with these tooling and technology.
                 </p>
 
-                <div className="flex flex-row text-center justify-center flex-wrap md:w-[60%] mt-5 mx-auto">
+                <div className="flex flex-row text-center justify-center flex-wrap md:w-[40%] mt-5 mx-auto">
                     {skillIcons}
                 </div>
             </div>
