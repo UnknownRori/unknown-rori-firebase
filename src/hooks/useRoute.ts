@@ -21,7 +21,7 @@ export default function useRoute(router: Map<string, JSX.Element>): ReturningVal
 
     const page = router.has(path) ? router.get(path) : router.get(PAGE_NOT_FOUND);
     const targetPage = router.has(path) ? path : PAGE_NOT_FOUND;
-    const currentPage = router.has(path) ? path : PAGE_NOT_FOUND;
+    const currentPage = targetPage;
 
     const [state, setState] = useState({
         page: page as JSX.Element,
