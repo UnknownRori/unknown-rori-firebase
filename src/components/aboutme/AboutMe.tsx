@@ -5,6 +5,7 @@ import Icon from "../social/Icon";
 
 export default function AboutMe() {
     const date = new Date();
+    const totalExperience = date.getFullYear() - 2019;
     const icons = ToolingIconList;
 
     const skillIcons = icons.map((icon: IconProps) =>
@@ -50,7 +51,7 @@ export default function AboutMe() {
                         }} typingDelay={500} />
                 </div>
                 <p>
-                    I been working on improving my PHP, Javascript, and other type of skills for {(date.getFullYear() - 2019)} years and
+                    I been working on improving my PHP, Javascript, and other type of skills for {totalExperience} years and
                     I'am very confident for working alongside with these tooling and technology.
                 </p>
 
