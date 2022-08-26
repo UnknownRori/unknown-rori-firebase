@@ -11,7 +11,7 @@ export default function App() {
     return (
         <>
             <Background />
-            <div className='min-h-screen flex'>
+            <div className='min-h-screen flex overflow-x-hidden'>
                 <RouterContext.Provider value={changePage}>
                     <Navbar />
                 </RouterContext.Provider>
