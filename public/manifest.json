@@ -3,6 +3,12 @@
   "name": "UnknownRori's Portfolio",
   "icons": [
     {
+      "src": "\/cover.png",
+      "sizes": "1366 x 615",
+      "type": "image\/png",
+      "density": "0.75"
+    },
+    {
       "src": "\/android-icon-36x36.png",
       "sizes": "36x36",
       "type": "image\/png",
