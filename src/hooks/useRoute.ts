@@ -82,7 +82,7 @@ export default function useRoute(router: Map<string, JSX.Element>): ReturningVal
 
     // Support back button in Routing
     // Still in experimental
-    window.onpopstate = (event) => {
+    window.onpopstate = () => {
         changePage(window.location.pathname);
     };
 
