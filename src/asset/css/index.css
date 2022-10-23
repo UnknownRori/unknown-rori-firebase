@@ -21,6 +21,28 @@
 
     .nav-link {
         @apply p-3;
+        --s: 0.2em;
+        /* the thickness of the line */
+        --c: white;
+        /* the color */
+
+        color: #0000;
+        padding-bottom: var(--s);
+        background:
+            linear-gradient(90deg, var(--c) 50%, rgb(196, 196, 196) 0) calc(100% - var(--_p, 0%))/200% 100%,
+            linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) var(--s) no-repeat;
+        -webkit-background-clip: text, padding-box;
+        background-clip: text, padding-box;
+        transition: 0.5s;
+    }
+
+    .nav-link:hover {
+        --_p: 100%
+    }
+
+    .nav-link.active {
+        @apply text-white;
+        --_p: 100%
     }
 
     .nav-item {
