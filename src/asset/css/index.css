@@ -20,16 +20,17 @@
     }
 
     .nav-link {
-        @apply p-3;
+        @apply p-3 mx-1;
+
         --s: 0.2em;
         /* the thickness of the line */
-        --c: white;
+        --c: rgb(202, 202, 202);
         /* the color */
 
         color: #0000;
         padding-bottom: var(--s);
         background:
-            linear-gradient(90deg, var(--c) 50%, rgb(196, 196, 196) 0) calc(100% - var(--_p, 0%))/200% 100%,
+            linear-gradient(90deg, var(--c) 50%, var(--c) 0) calc(100% - var(--_p, 0%))/200% 100%,
             linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) var(--s) no-repeat;
         -webkit-background-clip: text, padding-box;
         background-clip: text, padding-box;
@@ -42,7 +43,9 @@
 
     .nav-link.active {
         @apply text-white;
-        --_p: 100%
+        
+        --_p: 100%;
+        --c: white;
     }
 
     .nav-item {
