@@ -5,7 +5,7 @@ import LazyLoadImage from "../animation/LazyLoadImage";
 export default class ProjectItem extends React.Component<{ project: ProjectItemProp }> {
     render(): ReactNode {
         return (
-            <div title={this.props.project.description} className="group lg:w-3/12 md:w-6/12 sm:w-6/12 
+            <div title={this.props.project.description} className="group lg:w-3/12 md:w-6/12 sm:w-8/12 
             m-5 p-5 bg-gray-700 bg-opacity-60 rounded-md shadow-2xl ring-1 ring-gray-400 duration-1000
             hover:z-20 hover:-translate-y-5 hover:bg-gray-800 hover:bg-opacity-95 hover:ring-gray-600 
             hover:shadow-md"
