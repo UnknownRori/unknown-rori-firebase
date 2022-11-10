@@ -1,4 +1,4 @@
-interface IconProps {
+type IconProps = {
     id: number,
     href: string,
     img: string,

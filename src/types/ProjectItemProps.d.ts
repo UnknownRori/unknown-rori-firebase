@@ -1,4 +1,4 @@
-interface ProjectItemProps {
+type ProjectItemProps = {
     id: number,
     title: string,
     link: string,

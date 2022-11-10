@@ -1,4 +1,4 @@
-interface PageProps {
+type PageProps = {
     animateIn: boolean,
     animateOut: boolean,
 }

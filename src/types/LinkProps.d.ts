@@ -1,9 +1,9 @@
 import React from "react";
 
-interface LinkProps extends React.PropsWithChildren {
+type LinkProps = {
     href: string,
     className?: string,
     style?: React.CSSProperties,
-}
+} & React.PropsWithChildren;
 
 export default LinkProps;

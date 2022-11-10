@@ -1,4 +1,4 @@
-interface QuoteAPI {
+type QuoteAPI = {
     text: string,
     author: string,
 }

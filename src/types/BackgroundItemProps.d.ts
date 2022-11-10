@@ -1,3 +1,7 @@
-interface BackgroundItemProps { image: string, opacity: number }
+type BackgroundItemProps = {
+    image: string,
+    opacity: number
+}
+
 
 export default BackgroundItemProps;
