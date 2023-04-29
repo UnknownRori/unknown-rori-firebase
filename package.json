@@ -16,7 +16,7 @@
     "scripts": {
         "dev": "vite",
         "start": "vite",
-        "build": "vite build",
+        "build": "vite build --outDir build",
         "lint": "eslint . --ext .ts,.tsx"
     },
     "eslintConfig": {
