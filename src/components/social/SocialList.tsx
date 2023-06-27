@@ -1,5 +1,5 @@
+import SocialIconList from "@/data/SocialIconList";
 import Icon from './Icon';
-import SocialIconList from "../../data/SocialIconList";
 
 export default function SocialList() {
     const socialIconList = SocialIconList.map((icon) =>

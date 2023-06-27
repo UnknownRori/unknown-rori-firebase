@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import QuoteAPI from '../types/QuoteAPI';
+
+import QuoteAPI from '@/types/QuoteAPI';
 
 type ReturningValue = [QuoteAPI];
 

@@ -1,6 +1,7 @@
-import useBackgroundAnimation from '../../hooks/useBackgroundAnimation';
+import useBackgroundAnimation from '@/hooks/useBackgroundAnimation';
+import BackgroundImages from '@/data/Background';
+
 import BackgroundItem from './BackgroundItem';
-import BackgroundImages from '../../data/Background';
 
 export default function Background() {
     const [interval] = useBackgroundAnimation(BackgroundImages);

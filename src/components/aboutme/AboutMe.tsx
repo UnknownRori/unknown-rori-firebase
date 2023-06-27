@@ -1,7 +1,7 @@
 import ReactTypingEffect from "react-typing-effect";
-import ToolingIconList from "../../data/ToolingIconList";
-import IconProps from "../../types/Icon";
-import Icon from "../social/Icon";
+import ToolingIconList from "@/data/ToolingIconList";
+import Icon from "@/components/social/Icon";
+import IconProps from "@/types/Icon";
 
 export default function AboutMe() {
     const date = new Date();

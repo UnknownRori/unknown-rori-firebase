@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { ChangePage, RouterContext } from '../../hooks/useRoute';
-import LinkProps from '../../types/LinkProps';
+import { ChangePage, RouterContext } from '@/hooks/useRoute';
+import LinkProps from '@/types/LinkProps';
 
 export default function Link(props: LinkProps) {
     const changePage = useContext(RouterContext) as ChangePage;

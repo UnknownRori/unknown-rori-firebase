@@ -1,6 +1,7 @@
-import ProjectItem from "./ProjectItem";
 import ReactTypingEffect from "react-typing-effect";
-import ProjectListData from "../../data/ProjectList";
+
+import ProjectListData from "@/data/ProjectList";
+import ProjectItem from "./ProjectItem";
 
 export default function ProjectList() {
     const projectListElement: JSX.Element[] = ProjectListData.map((project) =>

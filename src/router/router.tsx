@@ -1,7 +1,7 @@
-import NotFound from "../page/404";
-import AboutMePage from "../page/AboutMe";
-import MyProfilePage from '../page/MyProfile';
-import MyProjectsPage from "../page/MyProjects";
+import NotFound from "@/page/404";
+import AboutMePage from "@/page/AboutMe";
+import MyProfilePage from '@/page/MyProfile';
+import MyProjectsPage from "@/page/MyProjects";
 
 /**
  * A definition for my custom router hook

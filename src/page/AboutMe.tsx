@@ -1,6 +1,8 @@
-import AboutMe from "../components/aboutme/AboutMe";
-import usePageAnimation from "../hooks/usePageAnimation";
-import PageProps from "../types/PageProps";
+import PageProps from "@/types/PageProps";
+
+import usePageAnimation from "@/hooks/usePageAnimation";
+
+import AboutMe from "@/components/aboutme/AboutMe";
 
 export default function AboutMePage(props: PageProps) {
     const [animate] = usePageAnimation(props);

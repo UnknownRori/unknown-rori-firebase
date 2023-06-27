@@ -1,8 +1,8 @@
-import IconProps from "../types/Icon";
+import IconProps from "@/types/Icon";
 
-import github from '../asset/image/social/github.webp';
-import stackoverflow from '../asset/image/social/stackoverflow.webp';
-import twitter from '../asset/image/social/twitter.webp';
+import github from '@/asset/image/social/github.webp';
+import stackoverflow from '@/asset/image/social/stackoverflow.webp';
+import twitter from '@/asset/image/social/twitter.webp';
 
 export default [
     { id: 1, className: "rounded-lg w-10 md:w-12 hover:translate-x-3", href: "https://github.com/UnknownRori", img: github, alt: "Github" },
