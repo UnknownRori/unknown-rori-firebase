@@ -1,5 +1,5 @@
 import LazyLoadImage from "../animation/LazyLoadImage";
-import profile from './../../asset/image/UnknownRori.webp';
+import profile from '@/asset/image/UnknownRori.webp';
 
 export default function ProfileImage() {
     return (

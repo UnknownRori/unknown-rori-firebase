@@ -1,10 +1,10 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Dancing+Script);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-@import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Dancing+Script);
 
 @layer components {
     .wrapper {
@@ -53,7 +53,7 @@
     }
 
     .button-secondary {
-        @apply bg-gray-800 rounded-lg duration-500 transition-colors focus:bg-gray-500;
+        @apply bg-gray-800 rounded-lg duration-500 transition-colors hover:bg-gray-500;
     }
 
     .profile-name {

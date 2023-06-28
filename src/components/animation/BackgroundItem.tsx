@@ -1,4 +1,4 @@
-import BackgroundItemProps from "../../types/BackgroundItemProps";
+import BackgroundItemProps from "@/types/BackgroundItemProps";
 
 export default function BackgroundItem(props: BackgroundItemProps) {
     return (

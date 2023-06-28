@@ -1,13 +1,13 @@
-import IconProps from "../types/Icon";
+import IconProps from "@/types/Icon";
 
-import Bootstrap from "../asset/image/icons/bootstrap.webp";
-import Laravel from "../asset/image/icons/laravel.webp";
-import ReactIcon from "../asset/image/icons/react.webp";
-import TailwindCSS from "../asset/image/icons/tailwind.webp";
-import Typescript from "../asset/image/icons/typescript.webp";
-import Vue from "../asset/image/icons/vue.webp";
-import Docker from "../asset/image/icons/docker.webp";
-import MySQL from "../asset/image/icons/mysql.webp";
+import Bootstrap from "@/asset/image/icons/bootstrap.webp";
+import Laravel from "@/asset/image/icons/laravel.webp";
+import ReactIcon from "@/asset/image/icons/react.webp";
+import TailwindCSS from "@/asset/image/icons/tailwind.webp";
+import Typescript from "@/asset/image/icons/typescript.webp";
+import Vue from "@/asset/image/icons/vue.webp";
+import Docker from "@/asset/image/icons/docker.webp";
+import MySQL from "@/asset/image/icons/mysql.webp";
 
 export default [
     { id: 1, className: "rounded-lg w-10 md:w-14 hover:translate-y-2", href: "https://getbootstrap.com/", img: Bootstrap, alt: "Bootstrap" },

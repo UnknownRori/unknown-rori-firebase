@@ -1,6 +1,6 @@
-import usePageAnimation from "../hooks/usePageAnimation";
-import useQuote from "../hooks/useQuote";
-import PageProps from "../types/PageProps";
+import usePageAnimation from "@/hooks/usePageAnimation";
+import PageProps from "@/types/PageProps";
+import useQuote from "@/hooks/useQuote";
 
 
 export default function NotFound(props: PageProps) {

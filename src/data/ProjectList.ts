@@ -1,11 +1,11 @@
-import ProjectItemProps from "../types/ProjectItemProps";
+import ProjectItemProps from "@/types/ProjectItemProps";
 
-import UnknownRoriPHP from "../asset/image/projects/php-framework.webp";
-import TicTacToe from "../asset/image/projects/tic-tac-toe.webp";
-import Calculator from "../asset/image/projects/basic-calculator.webp";
-import PianoTiles from "../asset/image/projects/piano-tiles.webp";
-import PersonalPortfolio from "../asset/image/projects/portfolio.webp";
-import FakeECommerceApp from "../asset/image/projects/fake-e-commerce-web-app.webp";
+import UnknownRoriPHP from "@/asset/image/projects/php-framework.webp";
+import TicTacToe from "@/asset/image/projects/tic-tac-toe.webp";
+import Calculator from "@/asset/image/projects/basic-calculator.webp";
+import PianoTiles from "@/asset/image/projects/piano-tiles.webp";
+import PersonalPortfolio from "@/asset/image/projects/portfolio.webp";
+import FakeECommerceApp from "@/asset/image/projects/fake-e-commerce-web-app.webp";
 
 export default [
     { id: 1, title: 'UnknownRori-PHP', link: "https://github.com/UnknownRori/UnknownRori-PHP", image: UnknownRoriPHP, description: "A custom non production web application framework inspired by Laravel." },
