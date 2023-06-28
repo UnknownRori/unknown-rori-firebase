@@ -9,10 +9,10 @@ export default class ProjectItem extends React.Component<{ project: ProjectItemP
             <div title={this.props.project.description} className="group lg:w-3/12 md:w-6/12 sm:w-8/12 
             m-5 p-5 bg-gray-700 bg-opacity-60 rounded-md shadow-2xl ring-1 ring-gray-400 duration-1000
             hover:z-20 hover:-translate-y-5 hover:bg-gray-800 hover:bg-opacity-95 hover:ring-gray-600 
-            hover:shadow-md"
+            hover:shadow-md relative"
             >
                 <p className="z-50 fixed pointer-events-none p-2 sm:text-sm md:text-md lg:text-md
-                bg-gray-800 bg-opacity-80 rounded opacity-0 shadow-2xl w-[88%]
+                bg-gray-800 bg-opacity-80 rounded opacity-0 shadow-2xl sm:w-[89%] md:w-[86%] lg:w-[87%]
                 group-hover:opacity-100 duration-1000">
                     {this.props.project.description}
                 </p>
