@@ -6,10 +6,8 @@ export default function MyProfilePage(props: PageProps) {
     const [animate] = usePageAnimation(props);
 
     return (
-        <>
-            <div className={"wrapper " + animate}>
-                <Profile />
-            </div>
-        </>
+        <div className={"wrapper " + animate}>
+            <Profile />
+        </div>
     );
 }
