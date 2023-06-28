@@ -9,12 +9,12 @@ export type State = boolean;
  * @param boolean initialState 
  * @returns [`State`, `ToggleState`]
  */
-export default function (initialState: boolean = false): [State, ToggleState] {
+export default function (initialState = false): [State, ToggleState] {
     const [state, setState] = useState(initialState);
 
     const toggleState = function () {
         setState(!state);
-    }
+    };
 
     return [state, toggleState];
 }
