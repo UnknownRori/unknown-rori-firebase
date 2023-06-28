@@ -10,6 +10,7 @@ module.exports = {
                 'lg': '800px',
                 'xl': '1024px',
                 '2xl': '1280px',
+                '3xl': '1680px',
             },
             keyframes: {
                 fadeInLeft: {

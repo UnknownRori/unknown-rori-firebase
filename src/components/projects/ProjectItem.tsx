@@ -12,7 +12,7 @@ export default class ProjectItem extends React.Component<{ project: ProjectItemP
             hover:shadow-md relative"
             >
                 <p className="z-50 fixed pointer-events-none p-2 sm:text-sm md:text-md lg:text-md
-                bg-gray-800 bg-opacity-80 rounded opacity-0 shadow-2xl sm:w-[89%] md:w-[86%] lg:w-[87%]
+                bg-gray-800 bg-opacity-80 rounded opacity-0 shadow-2xl sm:w-[89%] md:w-[86%] lg:w-[87%] 3xl:w-[92%]
                 group-hover:opacity-100 duration-1000">
                     {this.props.project.description}
                 </p>
