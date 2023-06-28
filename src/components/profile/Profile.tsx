@@ -1,4 +1,3 @@
-import React from "react";
 import ProfileImage from "./ProfileImage";
 import ProfileIntro from "./ProfileIntro";
 
