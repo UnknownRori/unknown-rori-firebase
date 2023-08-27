@@ -2,6 +2,7 @@ import Background from "@/components/animation/Background";
 import Footer from '@/components/navigation/Footer';
 import Navbar from '@/components/navigation/Navbar';
 import Sidebar from '@/components/navigation/Sidebar';
+import RouterView from "@/components/navigation/RouterView";
 
 import useRoute, { RouterContext } from "@/hooks/useRoute";
 import router from "@/router/router";
@@ -16,10 +17,11 @@ export default function App() {
                 <RouterContext.Provider value={changePage}>
                     <Navbar />
                 </RouterContext.Provider>
+
                 <Sidebar />
-                <>
-                    {currentPage}
-                </>
+
+                <RouterView page={currentPage} />
+
                 <Footer />
             </div>
         </>

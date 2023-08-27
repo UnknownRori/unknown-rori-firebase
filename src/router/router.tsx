@@ -1,7 +1,9 @@
-import NotFound from "@/page/404";
-import AboutMePage from "@/page/AboutMe";
-import MyProfilePage from '@/page/MyProfile';
-import MyProjectsPage from "@/page/MyProjects";
+import React from 'react';
+
+const NotFound = React.lazy(() => import("@/page/404"));
+const AboutMePage = React.lazy(() => import("@/page/AboutMe"));
+const MyProfilePage = React.lazy(() => import("@/page/MyProfile"));
+const MyProjectsPage = React.lazy(() => import("@/page/MyProjects"));
 
 /**
  * A definition for my custom router hook
