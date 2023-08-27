@@ -18,8 +18,8 @@ function FallbackView() {
 
         return () => {
             clearInterval(interval);
-        }
-    })
+        };
+    });
 
     return (
         <div id="profile" className="h-screen w-screen flex justify-center items-center">
@@ -30,7 +30,7 @@ function FallbackView() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default function(props: { page: JSX.Element }) {
