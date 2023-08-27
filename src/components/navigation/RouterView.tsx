@@ -22,7 +22,7 @@ function FallbackView() {
     });
 
     return (
-        <div id="profile" className="h-screen w-screen flex justify-center items-center">
+        <div id="loading" role="status" className="h-screen w-screen flex justify-center items-center">
             <div className="flex flex-col">
                 <div role="status" className="flex flex-col justify-center items-center">
                     <LoadingSpinner />
