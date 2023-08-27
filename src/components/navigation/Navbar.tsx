@@ -1,5 +1,8 @@
+import { useContext } from 'react';
+
 import LinkProps from '@/types/LinkProps';
 import Link from "./Link";
+import { RouterContext, RouterContextInner } from '@/hooks/useRoute';
 
 const NavLinkProps = [
     { href: '/', children: 'Profile' },
@@ -8,6 +11,8 @@ const NavLinkProps = [
 ] as LinkProps[];
 
 export default function Navbar() {
+    useContext(RouterContext) as RouterContextInner;
+
     return (
         <nav className="bg-gray-200 bg-opacity-20 fixed w-screen p-1 z-20">
             <div className="wrapper">

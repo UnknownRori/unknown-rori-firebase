@@ -4,24 +4,21 @@ import Navbar from '@/components/navigation/Navbar';
 import Sidebar from '@/components/navigation/Sidebar';
 import RouterView from "@/components/navigation/RouterView";
 
-import useRoute, { RouterContext } from "@/hooks/useRoute";
 import router from "@/router/router";
+import Router from "./components/navigation/Router";
 
 export default function App() {
-    const [currentPage, changePage] = useRoute(router);
-
     return (
         <>
             <Background />
             <div className='min-h-screen flex overflow-x-hidden'>
-                <RouterContext.Provider value={changePage}>
+                <Router router={router}>
                     <Navbar />
-                </RouterContext.Provider>
 
-                <Sidebar />
+                    <Sidebar />
 
-                <RouterView page={currentPage} />
-
+                    <RouterView />
+                </Router>
                 <Footer />
             </div>
         </>

@@ -1,6 +1,7 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState, useContext } from 'react';
 
 import LoadingSpinner from '@/components/animation/LoadingSpinner';
+import { RouterContext, RouterContextInner } from '@/hooks/useRoute';
 
 function FallbackView() {
     const MAXIMUM_DOT = 3;
@@ -33,10 +34,12 @@ function FallbackView() {
     );
 }
 
-export default function(props: { page: JSX.Element }) {
+export default function() {
+    const routerContext = useContext(RouterContext) as RouterContextInner;
+
     return (
         <Suspense fallback={<FallbackView />}>
-            {props.page}
+            {routerContext.page}
         </Suspense>
     );
 }
