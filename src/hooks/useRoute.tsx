@@ -21,7 +21,7 @@ export const RouterContext = React.createContext<RouterContextInner | null>(null
 
 // Use it to the router for lazy load the component
 export function lazyView(path: string): JSX.Element {
-    const Component = React.lazy(() => import(`../page/${path}`)) as React.LazyExoticComponent<(props: PageProps) => JSX.Element>;
+    const Component = React.lazy(() => import(`../page/${path}.tsx`)) as React.LazyExoticComponent<(props: PageProps) => JSX.Element>;
 
     return (
         <Component animateIn={false} animateOut={false} />
