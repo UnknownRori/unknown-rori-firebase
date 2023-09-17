@@ -1,5 +1,5 @@
 import generateId from "@/helpers/generateId";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const EXPIRE_MESSAGE = 2000;
 
@@ -16,13 +16,6 @@ type PushMessage = (content: Message) => void;
 type RemoveMessage = (id: number) => void;
 type DoneAnimateMessage = (id: number) => void;
 
-type ReturningValue = [
-    PushMessage,
-    DoneAnimateMessage,
-    RemoveMessage,
-    Array<Message>,
-]
-
 export type ToastContextInner = {
     queue: Array<Message>,
     push: PushMessage,
@@ -30,7 +23,7 @@ export type ToastContextInner = {
     remove: RemoveMessage,
 };
 
-export const ToastContext = React.createContext<ToastContextInner | null>(null)
+export const ToastContext = React.createContext<ToastContextInner | null>(null);
 
 export function createMessage(type: MessageType, content: string): Message {
     return {
@@ -39,10 +32,10 @@ export function createMessage(type: MessageType, content: string): Message {
         content: content,
         animatedIn: true,
         removed: false,
-    }
+    };
 }
 
-export default function(): ReturningValue {
+export default function(): ToastContextInner {
     const [queue, setQueue] = useState<Array<Message>>([]);
 
     function remove(id: number) {
@@ -69,8 +62,13 @@ export default function(): ReturningValue {
                 message.animatedIn = false;
 
             return message;
-        }))
+        }));
     }
 
-    return [push, doneAnimate, remove, queue];
+    return {
+        queue: queue,
+        push: push,
+        remove: remove,
+        animateDone: doneAnimate,
+    };
 }
