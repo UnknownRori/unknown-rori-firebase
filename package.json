@@ -4,13 +4,13 @@
     "private": true,
     "dependencies": {
         "@vitejs/plugin-react": "^3.1.0",
-        "firebase": "^9.8.1",
-        "react": "^18.1.0",
-        "react-dom": "^18.1.0",
-        "react-intersection-observer": "^9.1.0",
-        "react-lazy-load-image-component": "^1.5.5",
+        "firebase": "^9.23.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-intersection-observer": "^9.10.2",
+        "react-lazy-load-image-component": "^1.6.0",
         "react-typing-effect": "^2.0.5",
-        "typescript": "^4.6.4",
+        "typescript": "^4.9.5",
         "web-vitals": "^2.1.4"
     },
     "scripts": {
@@ -38,22 +38,22 @@
         ]
     },
     "devDependencies": {
-        "@testing-library/jest-dom": "^5.16.4",
-        "@testing-library/react": "^13.2.0",
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
-        "@types/jest": "^27.5.1",
-        "@types/node": "^16.11.36",
-        "@types/react": "^18.0.9",
-        "@types/react-dom": "^18.0.4",
-        "@types/react-lazy-load-image-component": "^1.5.2",
-        "@types/react-typing-effect": "^2.0.3",
-        "@typescript-eslint/eslint-plugin": "^5.25.0",
-        "@typescript-eslint/parser": "^5.25.0",
-        "autoprefixer": "^10.4.14",
-        "eslint": "^8.16.0",
-        "postcss": "^8.4.22",
-        "tailwindcss": "^3.3.1",
-        "vite": "^4.2.3",
-        "vite-plugin-pwa": "^0.16.4"
+        "@types/jest": "^27.5.2",
+        "@types/node": "^16.18.97",
+        "@types/react": "^18.3.1",
+        "@types/react-dom": "^18.3.0",
+        "@types/react-lazy-load-image-component": "^1.6.4",
+        "@types/react-typing-effect": "^2.0.7",
+        "@typescript-eslint/eslint-plugin": "^5.62.0",
+        "@typescript-eslint/parser": "^5.62.0",
+        "autoprefixer": "^10.4.19",
+        "eslint": "^8.57.0",
+        "postcss": "^8.4.38",
+        "tailwindcss": "^3.4.3",
+        "vite": "^4.5.3",
+        "vite-plugin-pwa": "^0.16.7"
     }
 }
